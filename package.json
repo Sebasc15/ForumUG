@@ -1,14 +1,14 @@
 {
   "name": "FORUMUG",
   "version": "1.0.0",
-  "description": "",
+  "description": "Aplicacion para el proyecto de ingenieria de software",
   "main": "index.js",
   "scripts": {
     "start": "node ./src/index.js",
     "dev": "nodemon ./src/index.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Sebastian Tapia Herrera",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
