@@ -1,0 +1,35 @@
+<div class="container p-3">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class="card">
+                <div class="card-header text-center">
+                    <h3>Nuevo Profesor</h3>
+                </div>
+                <div class="card-body">
+                    <form action="/Profesor/Guardar_profesor" method="POST">
+                    <div class="mb-3">
+                            <input type="text" name="NUE" class="form-control" placeholder="NUE" value="{{NUE}}" autofocus>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" name="Nombre" class="form-control" placeholder="Nombre" value="{{Nombre}}">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" name="Primer_Apellido" class="form-control" placeholder="Apellido Paterno" value="{{Primer_Apellido}}">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" name="Segundo_Apellido" class="form-control" placeholder="Apellido Materno" value="{{Segundo_Apellido}}">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" name="Correo" class="form-control" placeholder="Correo" value="{{Correo}}">
+                        </div>
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-success">
+                                Guardar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+<div class="container p">
+    <div class="row">
+        {{#each Actividad }}
+            <div class="col-md-3 mt-3">
+                <div class="card text-center">
+                    <div class="card-header text-center">
+                    <h3>{{Nombre_Actividad}}</h3>
+                </div>
+                    <div class="card-body">
+                        <a href="/Actividades/eliminar/{{ID_Actividad}}" class="btn btn-danger">Eliminar</a>
+                        <a href="/Actividades/listar/{{ID_Actividad}}" class="btn btn-secondary">Editar</a>
+                    </div>
+                </div>
+            </div>
+        {{else}}
+            <div class="col-md-4 mx-auto">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <p>No se encuentra ninguna actividad guardada.</p>
+                        <a href="/Actividades/Agregar">Crea una!</a>
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</div>

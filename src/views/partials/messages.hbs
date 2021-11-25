@@ -1,0 +1,14 @@
+{{#if success_msg}}
+    <div style="width: 50%; margin-left: 25%; font-size: 16px; text-align: center; margin-top: 10px;" class="alert alert-success alert-dismissible fade show" role="alert">
+        {{success_msg}}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+{{/if}}
+
+
+{{#if Error_msg}}
+    <div style="width: 50%; margin-left: 25%; font-size: 16px; text-align: center; margin-top: 10px;" class="alert alert-danger alert-dismissible fade show" role="alert">
+        {{Error_msg}}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+{{/if}}

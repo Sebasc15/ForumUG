@@ -1,0 +1,67 @@
+<div class="container">
+  <div class="row">
+    <p>
+      <a>
+        <img src="/Imagenes/LogoUG.jpg" alt="escudo universidad de guanajuato 4" class="rounded mx-auto d-block">
+      </a>
+    </p>
+  </div>
+</div>
+<nav class="navbar navbar-expand-lg navbar-light Borde">
+  <div class="container-fluid">
+     <button class="navbar-toggler" style="margin-left: 85%;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto me-auto">
+         <li class="nav-item linav ps-1 pe-1">
+          <a class="nav-link text-uppercase" href="/">Inicio</a>
+        </li>
+        <li class="nav-item linav ps-1 pe-1">
+          <a class="nav-link text-uppercase" href="/Actividades">Actividades</a>
+        </li>
+        <li class="nav-item linav ps-1 pe-1">
+          <a class="nav-link text-uppercase" href="/MisActividades">Mis Actividades</a>
+        </li>
+        {{#if user}}
+          <li class="navbar-item linav ps-1 pe-1">
+              <a href="/Perfil" class="nav-link text-uppercase">Perfil</a>
+          </li>
+          <li class="navbar-item linavUltimo ps-1 pe-1">
+              <a href="/Estudiante/logout" class="nav-link text-uppercase">Cerrar sesión</a>
+          </li>
+
+          {{#if admin}}
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-uppercase menu" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                ADMIN
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                <li><a class="dropdown-item" href="/Actividades/listar">Listar Actividades</a></li>
+                <li><a class="dropdown-item" href="/Actividades/Agregar">Añadir Actividad</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="/Profesor/listar">Listar Profesores</a></li>
+                <li><a class="dropdown-item" href="/Profesor/Agregar">Añadir Profesor</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="/Clases/listar">Listar Clases</a></li>
+                <li><a class="dropdown-item" href="/Clases/Agregar">Añadir Clase</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="/Reportes/Lista">Reportes</a></li>
+              </ul>
+            </li>
+          {{/if}}
+
+        {{else}}
+
+          <li class="navbar-item linav ps-1 pe-1">
+              <a href="/Estudiante/signin" class="nav-link text-uppercase">Iniciar sesión</a>
+          </li>
+          <li class="navbar-item linavUltimo ps-1 pe-1">
+              <a href="/Estudiante/signup" class="nav-link text-uppercase">Registrarse</a>
+          </li>
+        {{/if}}
+      </ul>
+      
+    </div>
+  </div>
+</nav>

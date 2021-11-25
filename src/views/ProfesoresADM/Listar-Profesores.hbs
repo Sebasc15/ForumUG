@@ -1,0 +1,30 @@
+<div class="container p">
+    <div class="row">
+        {{#each Profesor }}
+            <div class="col-md-3 mt-3">
+                <div class="card text-center">
+                    <div class="card-header text-center">
+                    <h3>{{Nombre}}</h3>
+                </div>
+                    <div class="card-body">
+                        <p class="m-2">{{Primer_Apellido}}</p>
+                        <p class="m-2">{{Segundo_Apellido}}</p>
+                        <p class="m-2">NUE: {{NUE}}</p>
+                        <p class="m-2">Correo: {{Correo}}</p>
+                        <a href="/Profesor/eliminar/{{NUE}}" class="btn btn-danger">Eliminar</a>
+                        <a href="/Profesor/listar/{{NUE}}" class="btn btn-secondary">Editar</a>
+                    </div>
+                </div>
+            </div>
+        {{else}}
+            <div class="col-md-4 mx-auto">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <p>No se encontro ningun profesor.</p>
+                        <a href="/Profesor/Agregar">Registre Uno!</a>
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</div>

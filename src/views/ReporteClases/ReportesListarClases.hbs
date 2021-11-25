@@ -1,0 +1,28 @@
+<div class="container p-2">
+    <div class="row">
+        {{#each Clases }}
+            <div class="col-md-3 mt-3">
+                <div class="card text-center">
+                    <div class="card-header text-center">
+                    <h3>{{Nombre_Clase}}</h3>
+                </div>
+                    <div class="card-body">
+                        <p class="m-2">Actividad: {{ID_Actividad}}</p>
+                        <p class="m-2">Locacion: {{Locacion}}</p>
+                        <p class="m-2">Fecha: {{Fecha}}</p>
+                        <p class="m-2">Horario: {{Horario}}</p>
+                        <a href="/Reportes/{{ID_Clase}}"class="btn btn-primary">Ver reporte</a>
+                    </div>
+                </div>
+            </div>
+        {{else}}
+            <div class="col-md-4 mx-auto">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <p class="m-2">UPS! No hay clases disponibles</p>
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</div>

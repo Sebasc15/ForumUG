@@ -1,0 +1,33 @@
+<div class="container p-3">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class="card">
+                <div class="card-header text-center">
+                    <h3>Editar Profesor</h3>
+                </div>
+                <div class="card-body">
+                    <form action="/Profesor/edit/{{Profesor.NUE}}?_method=PUT" method="POST">
+
+                        <div class="mb-3">
+                            <input type="text" name="Nombre" class="form-control" placeholder="Nombre" value="{{Profesor.Nombre}}" autofocus>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" name="Primer_Apellido" class="form-control" placeholder="Apellido Paterno" value="{{Profesor.Primer_Apellido}}">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" name="Segundo_Apellido" class="form-control" placeholder="Apellido Materno" value="{{Profesor.Segundo_Apellido}}">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" name="Correo" class="form-control" placeholder="Correo" value="{{Profesor.Correo}}">
+                        </div>
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-success">
+                                Guardar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

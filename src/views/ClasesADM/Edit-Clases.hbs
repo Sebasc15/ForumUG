@@ -1,0 +1,62 @@
+<div class="container p-3">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class="card">
+                <div class="card-header text-center">
+                    <h3>Editar Clase</h3>
+                </div>
+                <div class="card-body">
+                    <form action="/Clases/edit/{{Clase.ID_Clase}}" method="POST">
+                        <div class="mb-3">
+                            <input type="text" value="{{Clase.Nombre_Clase}}" name="Nombre_Clase" class="form-control" placeholder="Nombre Clase" autofocus>
+                        </div>
+                        <div class="mb-3">
+                            <select class="form-select form-control" aria-label="Select de profesores" name="NUE">
+                                <option selected value="{{Clase.NUE}}">{{Clase.NombreP}} {{Clase.ApellidoP}} {{Clase.ApellidoM}}</option>
+                                {{#if Profesores}}
+                                    {{#each Profesores }}
+                                        <option value="{{NUE}}">{{Nombre}} {{Primer_Apellido}} {{Segundo_Apellido}}</option>                                            
+                                    {{/each}}
+                                {{else}}
+                                    <p style="background-color: rgb(199, 61, 61);">Registra un profesor antes de continuar</p>
+                                {{/if}}
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" value="{{Clase.Locacion}}" name="Locacion" class="form-control" placeholder="Locacion">
+                        </div>
+                        <div class="mb-3">
+                            <input type="Date" value="{{Clase.Fecha}}" name="Fecha" class="form-control" placeholder="Fecha">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" value="{{Clase.Horario}}" name="Horario" class="form-control" placeholder="Horario">
+                        </div>
+                        <div class="mb-3">
+                            <input type="number" value="{{Clase.Cupo}}" name="Cupo" class="form-control" placeholder="Cupo">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" value="{{Clase.Descripcion}}" name="Descripcion" class="form-control" placeholder="Descipcion">
+                        </div>
+                        <div class="mb-3">
+                            <select class="form-select form-control" aria-label="Select de actividad" name="ID_Actividad">
+                                <option selected value="{{Clase.ID_Actividad}}">{{Clase.Nombre_ActividadA}}</option>
+                                {{#if Actividades}}
+                                    {{#each Actividades }}
+                                        <option value="{{ID_Actividad}}">{{Nombre_Actividad}}</option>
+                                    {{/each}}
+                                {{else}}
+                                    <p style="background-color: rgb(199, 61, 61);">Registra una actividad antes de continuar</p>
+                                {{/if}}
+                            </select>
+                        </div>
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-success">
+                                Guardar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

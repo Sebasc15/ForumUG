@@ -1,0 +1,72 @@
+.linav{
+    border-right: 1px solid #ccc;
+    border-right-color: rgb(204, 204, 204);
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-left: 0px solid #555;
+    border-left-color: rgb(85, 85, 85);
+    border-left-style: solid;
+    border-left-width: 0px;
+    font-size: 12px;
+    font-weight: bold;
+}
+.linavUltimo{
+    border-right: 0px solid #ccc;
+    border-right-color: rgb(204, 204, 204);
+    border-right-style: solid;
+    border-right-width: 0px;
+    border-left: 0px solid #555;
+    border-left-color: rgb(85, 85, 85);
+    border-left-style: solid;
+    border-left-width: 0px;
+    font-size: 12px;
+    font-weight: bold;
+}
+.menu{
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.Borde{
+    border-bottom: #A0935F 5px solid;
+    border-bottom-color: rgb(160, 147, 95);
+    border-bottom-style: solid;
+    border-bottom-width: 5px;
+    border-top: #C3C3C3 solid 1px; 
+    margin-top: 10px;
+}
+
+.backfooter{
+    background-color: #E5E5E5;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 30px;
+}
+
+.pie{
+    width: 85%;
+    margin: 0 auto;
+}
+.contineredes{
+    display: block;
+    margin: 20px auto 30px auto !important;
+    max-width: 239px;
+    min-width: 210px;
+}
+.direccion{
+    line-height: 10px !important;
+    font-size: 90%;
+    min-width: 50%;
+}
+.contred{
+    display: inline-block;
+    padding: 6px 0px 6px 4px;
+    margin-right: 10px;
+    width: 32px;
+    height: 28px;
+}
+
+body{
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+}

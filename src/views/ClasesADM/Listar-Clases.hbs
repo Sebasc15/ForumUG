@@ -1,0 +1,33 @@
+<div class="container p">
+    <div class="row">
+        {{#each Clases }}
+            <div class="col-md-3 mt-3">
+                <div class="card text-center">
+                    <div class="card-header text-center">
+                    <h3>{{Nombre_Clase}}</h3>
+                </div>
+                    <div class="card-body">
+                        <p class="m-2">Actividad: {{ID_Actividad}}</p>
+                        <p class="m-2">Profesor: {{NUE}}</p>
+                        <p class="m-2">Locacion: {{Locacion}}</p>
+                        <p class="m-2">Fecha: {{Fecha}}</p>
+                        <p class="m-2">Horario: {{Horario}}</p>
+                        <p class="m-2">Cupo: {{Cupo}} personas</p>
+                        <p class="m-2">Descripcion: {{Descripcion}}</p>
+                        <a href="/Clases/eliminar/{{ID_Clase}}" class="btn btn-danger">Eliminar</a>
+                        <a href="/Clases/listar/{{ID_Clase}}" class="btn btn-secondary">Editar</a>
+                    </div>
+                </div>
+            </div>
+        {{else}}
+            <div class="col-md-4 mx-auto">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <p>No se encontro ninguna Clase.</p>
+                        <a href="/Clases/Agregar">Registre Uno!</a>
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</div>
