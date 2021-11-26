@@ -5,6 +5,7 @@ const pool = require('../database');
 const helpers = require('../helpers/encrypt');
 
 //Admin
+/*
 passport.use('local.adm.signup', new LocalStrategy({
     usernameField: 'NUE',
     passwordField: 'Contraseña',
@@ -16,9 +17,11 @@ passport.use('local.adm.signup', new LocalStrategy({
     }
     newadmin.Contraseña = await helpers.encryptPassword(Contraseña);
     const result = await pool.query('INSERT INTO admin SET ?', [newadmin]);
-    req.session.rol = 'Admin';
-    return done(null, newadmin);
+    //req.session.rol = 'Admin';
+    const usuario = req.user;
+    return done(null, usuario);
 }));
+*/
 
 passport.use('local.adm.signin', new LocalStrategy({
     usernameField: 'NUA',

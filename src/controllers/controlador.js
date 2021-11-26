@@ -1,5 +1,5 @@
 const controlador = {};
-const { req, res, application } = require("express");
+const { req, res} = require("express");
 
 const Clase_servicio = require("../services/servicesPublicos/ClasesPublic");
 const servicio = new Clase_servicio();

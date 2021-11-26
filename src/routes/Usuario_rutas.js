@@ -2,6 +2,9 @@ const { Router } = require("express");
 const router = Router();
 const passport = require('passport');
 const {validateCreate} = require('../validators/Estudiante');
+const {validateadm} = require('../validators/admin');
+const {isAuthenticatedADM} = require('../helpers/auth');
+const {registrar} = require("../controllers/controlador_adm");
 
 const {
     renderSignUpForm,
@@ -49,17 +52,11 @@ router.post('/Estudiante/signin', async (req, res, next) =>{
     }
 });
 
-/*
-router.get('/ADMN/signup', renderADMSignupForm);
 
-router.post('/ADMN/signup', async(req, res, next)=>{
-    passport.authenticate('local.adm.signup',{
-        successRedirect: '/Perfil',
-        failureRedirect: '/ADMN/signup',
-        passReqToCallback: true
-    })(req, res, next);
-});
-*/
+router.get('/ADMN/signup', isAuthenticatedADM, renderADMSignupForm);
+
+router.post('/ADMN/signup', isAuthenticatedADM, validateadm, registrar);
+
 
 router.get('/Estudiante/logout', logout);
 
