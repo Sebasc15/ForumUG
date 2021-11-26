@@ -9,10 +9,10 @@ const passport = require('passport');
 
 
 const basededatos={
-    host= "mysqlrinzler.mysql.database.azure.com",
-    user= "sebas@mysqlrinzler",
-    password= "uno234567_Diez",
-    database= "forumug" 
+    host: "mysqlrinzler.mysql.database.azure.com",
+    user: "sebas@mysqlrinzler",
+    password: "uno234567_Diez",
+    database: "forumug"  
 }
 
 //Inicializacion
