@@ -1,13 +1,12 @@
 const mysql = require('mysql');
 const {promisify} = require('util');
 
-const {host, user, password, database} = process.env;
 
 const basededatos={
-    host: host,
-    user: user,
-    password: password,
-    database: database    
+    host= "mysqlrinzler.mysql.database.azure.com",
+    user= "sebas@mysqlrinzler",
+    password= "uno234567_Diez",
+    database= "forumug"    
 }
 
 const pool = mysql.createPool(basededatos);
